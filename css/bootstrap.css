@@ -4242,12 +4242,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  /*s*/
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    /*border-radius: 4px;*/
   }
 }
 @media (min-width: 768px) {
@@ -5036,7 +5036,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5061,7 +5061,7 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 68px;
+    /*padding-top: 68px;*/
     padding-bottom: 48px;
   }
   .container .jumbotron,
@@ -6840,7 +6840,7 @@ button.close {
   padding-top: 30px;
 }
 .jumbotron .row {
-  padding: 30px 0 0 0;
+  padding: 0 0 0 0;
 }
 
 /*Footer*/
@@ -6874,4 +6874,53 @@ body {
 
 .site-content {
   flex: 1;
+}
+
+/*Header*/
+.navbar-user {
+    float: left;
+    height: 50px;
+    padding: 13px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.my-breadcrumb {
+  margin: 16px 0 40px;
+}
+.vertical-spacer {
+  margin: 0 8px;
+}
+
+/*Left nav*/
+.bs-docs-sidebar .nav>.active:focus>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active>a {
+    padding-left: 16px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-right: 2px solid #563d7c;
+}
+.back-to-top {
+    padding: 4px 14px;
+    margin-top: 16px;
+    /* margin-left: 10px; */
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidenav {
+  margin-bottom: 10px;
+}
+.doc-section {
+  margin-top: 40px;
+}
+.divider {
+    height: 1px;
+    margin: 8px 0 8px 10px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+@media (min-width: 992px)
+.bs-docs-sidebar.affix {
+    position: fixed;
+    top: 40px;
 }
