@@ -104,7 +104,7 @@
               </li>
               <li role="separator" class="divider"></li>
             </ul>
-            <a class="back-to-top" href="#top">
+            <a class="back-to-top" href="#js-top">
               Back to top
             </a>
           </nav>
@@ -234,7 +234,7 @@
 
       $(document).ready(function(){
         // Add smooth scrolling to all links
-        $(".bs-docs-sidenav li a").on('click', function(event) {
+        $(".bs-docs-sidenav li a, .back-to-top").on('click', function(event) {
 
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
