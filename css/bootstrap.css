@@ -6913,6 +6913,9 @@ body {
 .doc-section {
   margin-top: 40px;
 }
+.doc-section:first-of-type {
+  margin-top: 0;
+}
 .divider {
     height: 1px;
     margin: 8px 0 8px 10px;
