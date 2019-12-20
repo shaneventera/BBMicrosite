@@ -203,11 +203,296 @@ docker run -p 8080:8080 bluebutton-rest-client</code></pre>
           </div>
           <div class="doc-section">
             <h2 id="js-fields">Response Fields</h2>
-            <p style="margin-bottom: 200px;"></p>
+            <ol>
+              <li>provider_first_name</li>
+              <li>provider_organization_name_legal_business_name</li>
+              <li>authorized_official_last_name</li>
+              <li>PRF_PHYSN_NPIORG_NPI_NUM</li>
+              <li>bene_id</li>
+              <li>clm_from_dt</li>
+              <li>clm_thru_dtcarr_num</li>
+              <li>prncpal_dgns_cd</li>
+              <li>nch_clm_prvdr_pmt_amt</li>
+              <li>NCH_CARR_CLM_ALOWD_AMT</li>
+              <li>NCH_CARR_CLM_SBMTD_CHRG_AMT</li>
+              <li>hcpcs_cd</li>
+              <li>HCPCS_1ST_MDFR_CD</li>
+              <li>line_icd_dgns_cd</li>
+              <li>betos_cd</li>
+              <li>line_prvdr_pmt_amt</li>
+              <li>line_1st_expns_dt</li>
+              <li>line_last_expns_dt</li>
+
+            </ol>
           </div>
           <div class="doc-section">
             <h2 id="js-example">Response Example</h2>
-            <p style="margin-bottom: 200px;"></p>
+            <p>Following is the bundle example with one Explanation of Benefit for provider “1720081763”:</p>
+            <pre><code>{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "eob-10752790369.1720081763",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "eob-10752790369.1720081763",
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "1",
+            "name": [
+              {
+                "family": "willoughby",
+                "given": [
+                  "1720081763- [First Name not found in PROVIDER_NAMES]"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "2",
+            "name": "towne & country pharmacy florist & gifts inc"
+          },
+          {
+            "resourceType": "Claim",
+            "id": "3",
+            "billablePeriod": {
+              "start": "1999-11-01T00:00:00-05:00",
+              "end": "1999-11-01T00:00:00-05:00"
+            },
+            "careTeam": [
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1710986526"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1558360115"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1629075940"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1275526303"
+                }
+              }
+            ],
+            "diagnosis": [
+              {
+                "sequence": 1,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "1:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 2,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "2:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 3,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "3:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 4,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "4:Diagnosis Code"
+                    }
+                  ]
+                }
+              }
+            ],
+            "procedure": [
+              {
+                "sequence": 1,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "83721-99999",
+                      "display": "1:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 2,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "84478-99999",
+                      "display": "2:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 3,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "80054-99999",
+                      "display": "3:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 4,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "G0001-99999",
+                      "display": "4:Procedure Code"
+                    }
+                  ]
+                }
+              }
+            ],
+            "item": [
+              {
+                "sequence": 1,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 2,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 3,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 4,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 0,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_num/",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_num/",
+              "value": "99999"
+            }
+          }
+        ],
+        "patient": {
+          "reference": "http://ventera-code360.designchallenge.com/patient/19990000001171"
+        },
+        "billablePeriod": {
+          "start": "1999-11-01T00:00:00-05:00",
+          "end": "1999-11-01T00:00:00-05:00"
+        },
+        "provider": {
+          "reference": "#1"
+        },
+        "organization": {
+          "reference": "#2"
+        },
+        "claim": {
+          "reference": "#3"
+        },
+        "totalCost": {
+          "value": 50,
+          "system": "urn:iso:std:iso:4217",
+          "code": "USD"
+        },
+        "totalBenefit": {
+          "value": 30,
+          "system": "urn:iso:std:iso:4217",
+          "code": "USD"
+        },
+        "payment": {
+          "amount": {
+            "value": 30,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      },
+      "request": {
+        "method": "GET",
+        "url": "http://ventera-code360.designchallenge.com/"
+      }
+    }
+  ]
+}</code></pre>
           </div>
           <div class="doc-section">
             <h2 id="js-example">Support</h2>
