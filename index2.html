@@ -140,9 +140,7 @@
             <h2 id="js-description">Description</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam. Vivamus ullamcorper aliquam pretium.</p>
 
-            <blockquote>
-              <p>Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam: </p><pre v-pre="" data-lang=""><code class="lang-"> Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam.</code></pre>
-            </blockquote>
+            
 
           </div>
           <div class="doc-section">
@@ -151,7 +149,53 @@
           </div>
           <div class="doc-section">
             <h2 id="js-authentication">Authentication</h2>
-            <p style="margin-bottom: 200px;"></p>
+            
+
+
+            <h3>Running the App</h3>
+            <p>Build and install the Libraries</p>
+            <pre><code>./mvnw clean install
+./mvnw spring-boot:run
+            </code></pre>
+            <p>Run in a docker container</p>
+            <pre><code>docker build -t bluebutton-rest-client .
+docker run -p 8080:8080 bluebutton-rest-client</code></pre>
+            <h4>Using the App</h4>
+            <h5>Step 1</h5>
+            <p>Once the application is started, we will need to ensure that we are authenticated with the server before we can complete anything. First we will run a test to see if the app is up and we get an unauthorized error.
+            Run:</p>
+            <pre><code>curl http://localhost:8080/resources/trusted_client</code></pre>
+            <p>You should expect some response with a JSON object with an <code>error: "Unauthorized"</code> field.</p>
+            <h5>Step 2</h5>
+            <p>We need to get authorization before proceeding.</p>
+            <p>To authenticate against the server run the curl command:</p>
+            <pre><code>curl -v http://localhost:8080/oauth/token \
+   -H "Accept: application/json" \
+   -H "Accept-Language: en_US" \
+   -u "trusted-app:secret" \
+   -d "grant_type=client_credentials"</code></pre>
+            <p>You should expect a large payload with a field in the JSON response titled: <code>access_token: </code></p>
+            <h5>Step 3</h5>
+            <p>Copy the complete value of the <code>access_token</code> and paste it into this command:
+            Make sure to replace <code>{AUTHORIZATION_TOKEN}</code> with the copied value.</p>
+            <pre><code>curl -H "Authorization: Bearer {AUTHORIZATION_TOKEN}" http://localhost:8080/resources/trusted_client</code></pre>
+            <p>If it was successful you should see the response: <code>hello user authenticated by trusted client</code></p>
+            <h4>SwaggerUI</h4>
+            <p>SwaggerUI should contain all of the list of API's and provide an interface
+            to describe the inputs and possible outputs.
+            If prompted by a username and password:
+            username: user
+            password: password
+            <code>http://localhost:8080/swagger-ui.html</code></p>
+            <h4>Running Automated Tests</h4>
+            <p>Automated Tests can be run from this directory using:</p>
+            <pre><code>./test.sh</code></pre>
+            <h4>Running the Query Script</h4>
+            <p>The Query script can be run using the following format:</p>
+            <pre><code>./query.sh NPI_VALUE</code></pre>
+            <p>Where the <code>NPI_VALUE</code> is the npi you are searching for</p>
+
+            
           </div>
           <div class="doc-section">
             <h2 id="js-parameters">Parameters</h2>
