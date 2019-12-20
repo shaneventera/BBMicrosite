@@ -105,9 +105,6 @@
                 <a href="#js-authentication">Authentication</a>
               </li>
               <li>
-                <a href="#js-parameters">Parameters</a>
-              </li>
-              <li>
                 <a href="#js-fields">Response Fields</a>
               </li>
               <li>
@@ -133,19 +130,34 @@
         <hr>
           <div class="doc-section">
             <h2 id="js-started">Getting Started</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam. Vivamus ullamcorper aliquam pretium.</p>
+            <p>You can get started on building your integration with the Blue Button Design Challenge API by following these steps:</p>
+
+            <ol>
+              <li>Review Blue Button 2.0 Design <a href="https://github.com/Ventera-Corporation/cms-bb-2.0-api-challenge/blob/master/architecture.md">Challenge Architecture</a></li>
+              <li>Review Developer Documentation (link to API Documentation section(s))</li>
+              <li>
+                Request
+                <ul>
+                  <li><a href="#js-authentication">Authentication</a></li>
+                  <li><a href="#js-fields">Response Fields</a></li>
+                  <li><a href="#js-example">Response Example</a></li>
+                </ul>
+              </li>
+            </ol>
 
           </div>
           <div class="doc-section">
             <h2 id="js-description">Description</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam. Vivamus ullamcorper aliquam pretium.</p>
+            <p>The BB 2.0 design challenge API supports querying Medicare Part B “carrier” claims data. The API will return Explanation of Benefits records for beneficiaries grouped by provider (NPI ID). </p>
+
+            <p><i class="text-muted">Note that for the design challenge the response has been limited to 20 fields which were prioritized based on requirements specified in the design challenge readme as well as on what a submitting provider would need to link returned data to submissions and for verification.</i></p>
 
             
 
           </div>
           <div class="doc-section">
             <h2 id="js-request">Request</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna turpis, placerat rutrum neque ut, rhoncus accumsan quam. Vivamus ullamcorper aliquam pretium.</p>
+            <p><code>GET http://3.87.206.119:8000/api/bluebutton/api/documents/bundle/{npi}</code></p>
           </div>
           <div class="doc-section">
             <h2 id="js-authentication">Authentication</h2>
@@ -197,10 +209,7 @@ docker run -p 8080:8080 bluebutton-rest-client</code></pre> -->
 
             
           </div>
-          <div class="doc-section">
-            <h2 id="js-parameters">Parameters</h2>
-            <p style="margin-bottom: 200px;"></p>
-          </div>
+        
           <div class="doc-section">
             <h2 id="js-fields">Response Fields</h2>
             <ol>
