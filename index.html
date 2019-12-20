@@ -24,7 +24,10 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/ie-emulation-modes-warning.js"></script>
+    
+</script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,9 +36,9 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="300" style="position: relative;">
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" id="js-top">
       <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -45,19 +48,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">
-            <img src="images/logo.svg"> 
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo-ventera.png"> 
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <div class="navbar-user navbar-right">
+            <!-- <div class="navbar-user navbar-right">
               <img src="images/icon-user.svg"> 
             </div>
             <ul class="nav navbar-nav navbar-right">
               <li class=""><a href="documentation.html">Documentation</a></li>
               <li><a href="">Support</a></li>
               <li><a href="">API Blog</a></li>
-            </ul>
+            </ul> -->
         </div>
         <!--/.nav-collapse -->
       </div>
@@ -65,104 +68,518 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <!-- <div class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 title-box">
-            <h1>Design Challenge API</h1>
-          </div>
-          <div class="col-md-8">
-            <p>CMS is here to help you get up and running with our easy to use, step by step Quickstart Guide. This guide is for the savvy user who...</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Documentation</a>
+          <div class="col-md-9">
+            <h2>Design Challenge API</h2>
+            <p>Ventera has created this site to help guide you in using the API for the design challenge.</p>
+            
           </div>
         </div>
         
+        
       </div>
-    </div>
+    </div> -->
+    
 
     <div class="container site-content">
       <!-- Example row of columns -->
+      
       <div class="row">
-        <div class="col-md-4">
-          <h2>Get Started</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Documentation</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+
+<!-- Left nav -->
+        <div class="col-md-3 side-nav" role="complementary">
+          <nav id="sticker" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+            <ul class="nav bs-docs-sidenav">
+              <li>
+                <a href="#js-started">Getting Started</a>
+              </li>
+              <li>
+                <a href="#js-description">Description</a>
+              </li>
+              <li>
+                <a href="#js-request">Request</a>
+              </li>
+              <li>
+                <a href="#js-authentication">Authentication</a>
+              </li>
+              <li>
+                <a href="#js-fields">Response Fields</a>
+              </li>
+              <li>
+                <a href="#js-example">Response Example</a>
+              </li>
+              <li>
+                <a href="#js-support">Support</a>
+              </li>
+              <li role="separator" class="divider"></li>
+            </ul>
+            <a class="back-to-top" href="#js-top">
+              Back to top
+            </a>
+          </nav>
         </div>
-        <div class="col-md-4">
-          <h2>Sandbox</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">Sign Up &raquo;</a> <span class="vertical-spacer">|</span> <a href="">Already have an account?</a></p>
+
+<!-- Content -->
+        <div class="col-md-9" role="main">
+          <h1>Design Challenge API</h1>
+          <p class="title-text">Ventera has created this site to help guide you in using the API for the design challenge.</p>
+            
+
+        <hr>
+          <div class="doc-section">
+            <h2 id="js-started">Getting Started</h2>
+            <p>You can get started on building your integration with the Blue Button Design Challenge API by following these steps:</p>
+
+            
+            <h3>Step 1</h3>
+            Review Blue Button 2.0 Design <a href="https://github.com/Ventera-Corporation/cms-bb-2.0-api-challenge/blob/master/architecture.md">Challenge Architecture</a>
+
+            <h3>Step 2</h3>
+              Review Developer Documentation (link to API Documentation section(s))
+            
+            <h3>Step 3</h3>
+                Request
+                <ul>
+                  <li><a href="#js-authentication">Authentication</a></li>
+                  <li><a href="#js-fields">Response Fields</a></li>
+                  <li><a href="#js-example">Response Example</a></li>
+                </ul>
+
+          </div>
+          <div class="doc-section">
+            <h2 id="js-description">Description</h2>
+            <p>The BB 2.0 design challenge API supports querying Medicare Part B “carrier” claims data. The API will return Explanation of Benefits records for beneficiaries grouped by provider (NPI ID). </p>
+
+            <p><i class="text-muted">Note that for the design challenge the response has been limited to 20 fields which were prioritized based on requirements specified in the design challenge readme as well as on what a submitting provider would need to link returned data to submissions and for verification.</i></p>
+
+            
+
+          </div>
+          <div class="doc-section">
+            <h2 id="js-request">Request</h2>
+            <p><code>GET http://3.87.206.119:8000/api/bluebutton/api/documents/bundle/{npi}</code></p>
+          </div>
+          <div class="doc-section">
+            <h2 id="js-authentication">Authentication</h2>
+            
+
+
+            <!-- <h3>Running the App</h3>
+            <p>Build and install the Libraries</p>
+            <pre><code>./mvnw clean install
+./mvnw spring-boot:run
+            </code></pre>
+            <p>Run in a docker container</p>
+            <pre><code>docker build -t bluebutton-rest-client .
+docker run -p 8080:8080 bluebutton-rest-client</code></pre> -->
+            <h3>Using the App</h3>
+            <h5>Step 1</h5>
+            <p>Once the application is started, we will need to ensure that we are authenticated with the server before we can complete anything. First we will run a test to see if the app is up and we get an unauthorized error.
+            Run:</p>
+            <pre><code>curl http://localhost:8080/resources/trusted_client</code></pre>
+            <p>You should expect some response with a JSON object with an <code>error: "Unauthorized"</code> field.</p>
+            <h5>Step 2</h5>
+            <p>We need to get authorization before proceeding.</p>
+            <p>To authenticate against the server run the curl command:</p>
+            <pre><code>curl -v http://localhost:8080/oauth/token \
+   -H "Accept: application/json" \
+   -H "Accept-Language: en_US" \
+   -u "trusted-app:secret" \
+   -d "grant_type=client_credentials"</code></pre>
+            <p>You should expect a large payload with a field in the JSON response titled: <code>access_token: </code></p>
+            <h5>Step 3</h5>
+            <p>Copy the complete value of the <code>access_token</code> and paste it into this command:
+            Make sure to replace <code>{AUTHORIZATION_TOKEN}</code> with the copied value.</p>
+            <pre><code>curl -H "Authorization: Bearer {AUTHORIZATION_TOKEN}" http://localhost:8080/resources/trusted_client</code></pre>
+            <p>If it was successful you should see the response: <code>hello user authenticated by trusted client</code></p>
+            <!-- <h3>SwaggerUI</h3>
+            <p>SwaggerUI should contain all of the list of API's and provide an interface
+            to describe the inputs and possible outputs.
+            If prompted by a username and password:
+            username: user
+            password: password
+            <code>http://localhost:8080/swagger-ui.html</code></p> -->
+            <h3>Running Automated Tests</h3>
+            <p>Automated Tests can be run from this directory using:</p>
+            <pre><code>./test.sh</code></pre>
+            <h3>Running the Query Script</h3>
+            <p>The Query script can be run using the following format:</p>
+            <pre><code>./query.sh NPI_VALUE</code></pre>
+            <p>Where the <code>NPI_VALUE</code> is the npi you are searching for</p>
+
+            
+          </div>
+        
+          <div class="doc-section">
+            <h2 id="js-fields">Response Fields</h2>
+            <ol>
+              <li>provider_first_name</li>
+              <li>provider_organization_name_legal_business_name</li>
+              <li>authorized_official_last_name</li>
+              <li>PRF_PHYSN_NPIORG_NPI_NUM</li>
+              <li>bene_id</li>
+              <li>clm_from_dt</li>
+              <li>clm_thru_dtcarr_num</li>
+              <li>prncpal_dgns_cd</li>
+              <li>nch_clm_prvdr_pmt_amt</li>
+              <li>NCH_CARR_CLM_ALOWD_AMT</li>
+              <li>NCH_CARR_CLM_SBMTD_CHRG_AMT</li>
+              <li>hcpcs_cd</li>
+              <li>HCPCS_1ST_MDFR_CD</li>
+              <li>line_icd_dgns_cd</li>
+              <li>betos_cd</li>
+              <li>line_prvdr_pmt_amt</li>
+              <li>line_1st_expns_dt</li>
+              <li>line_last_expns_dt</li>
+            </ol>
+          </div>
+          <div class="doc-section">
+            <h2 id="js-example">Response Example</h2>
+            <p>Following is the bundle example with one Explanation of Benefit for provider “1720081763”:</p>
+            <pre><code>{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "eob-10752790369.1720081763",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "eob-10752790369.1720081763",
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "1",
+            "name": [
+              {
+                "family": "willoughby",
+                "given": [
+                  "1720081763- [First Name not found in PROVIDER_NAMES]"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "2",
+            "name": "towne & country pharmacy florist & gifts inc"
+          },
+          {
+            "resourceType": "Claim",
+            "id": "3",
+            "billablePeriod": {
+              "start": "1999-11-01T00:00:00-05:00",
+              "end": "1999-11-01T00:00:00-05:00"
+            },
+            "careTeam": [
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1710986526"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1558360115"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1629075940"
+                }
+              },
+              {
+                "sequence": 1,
+                "provider": {
+                  "reference": "http://ventera-code360.designchallenge.com/practitioner/1275526303"
+                }
+              }
+            ],
+            "diagnosis": [
+              {
+                "sequence": 1,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "1:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 2,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "2:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 3,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "3:Diagnosis Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 4,
+                "diagnosisCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "9999999",
+                      "display": "4:Diagnosis Code"
+                    }
+                  ]
+                }
+              }
+            ],
+            "procedure": [
+              {
+                "sequence": 1,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "83721-99999",
+                      "display": "1:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 2,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "84478-99999",
+                      "display": "2:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 3,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "80054-99999",
+                      "display": "3:Procedure Code"
+                    }
+                  ]
+                }
+              },
+              {
+                "sequence": 4,
+                "procedureCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/ex-icd-9-procedures",
+                      "code": "G0001-99999",
+                      "display": "4:Procedure Code"
+                    }
+                  ]
+                }
+              }
+            ],
+            "item": [
+              {
+                "sequence": 1,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 2,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 3,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 10,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              },
+              {
+                "sequence": 4,
+                "servicedPeriod": {
+                  "start": "1999-11-01T00:00:00-05:00",
+                  "end": "1999-11-01T00:00:00-05:00"
+                },
+                "net": {
+                  "value": 0,
+                  "system": "urn:iso:std:iso:4217",
+                  "code": "USD"
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_num/",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_num/",
+              "value": "99999"
+            }
+          }
+        ],
+        "patient": {
+          "reference": "http://ventera-code360.designchallenge.com/patient/19990000001171"
+        },
+        "billablePeriod": {
+          "start": "1999-11-01T00:00:00-05:00",
+          "end": "1999-11-01T00:00:00-05:00"
+        },
+        "provider": {
+          "reference": "#1"
+        },
+        "organization": {
+          "reference": "#2"
+        },
+        "claim": {
+          "reference": "#3"
+        },
+        "totalCost": {
+          "value": 50,
+          "system": "urn:iso:std:iso:4217",
+          "code": "USD"
+        },
+        "totalBenefit": {
+          "value": 30,
+          "system": "urn:iso:std:iso:4217",
+          "code": "USD"
+        },
+        "payment": {
+          "amount": {
+            "value": 30,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      },
+      "request": {
+        "method": "GET",
+        "url": "http://ventera-code360.designchallenge.com/"
+      }
+    }
+  ]
+}</code></pre>
+          </div>
+          <div class="doc-section">
+            <h2 id="js-support">Support</h2>
+            <p style="margin-bottom: 200px;"></p>
+          </div>
+
+
         </div>
       </div>
-    </div> <!-- /container -->
+    </div>
 
-								<footer>
+       <!-- /container -->
+
+			<footer>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="container-fluid">
-							<a tabindex="0" class="btn btn-lg btn-defaultr" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
-						</div>
-					</div>
-					<div class="row">
-						    <div class="container">
-					            	<div class="col-sm-8 col-md-9 col-lg-9">
-						                <div class="logo-container"><img src="images/logo.svg" alt="Quality Payment Program" class="qpp-logo">
-						                    <div class="social-container"><a rel="noopener noreferrer" target="_blank" class="social-link" href="https://twitter.com/CMSGov" aria-label="Follow us on Twitter. This link opens in a new window."><span class="glyphicon glyphicon-twitter"></span></a><a rel="noopener noreferrer" target="_blank" class="social-link" href="https://www.youtube.com/playlist?list=PLaV7m2-zFKpj_6fBsqav6GvFzzq9oOpkk" aria-label="Follow us on YouTube. This link opens in a new window."><span class="glyphicon glyphicon-youtube"></span></a></div>
-						                </div>
-						                <div class="col-md-3">
-															        <h6 class="h5">CMS &amp; HHS Websites</h6>
-															        <ul class="">
-															          <li><a href="https://www.cms.gov/">CMS.gov</a></li>
-															          <li><a href="https://www.medicare.gov/">Medicare.gov</a></li>
-															          <li><a href="https://www.mymedicare.gov/">MyMedicare.gov</a></li>
-															          <li><a href="https://www.medicaid.gov/">Medicaid.gov</a></li>
-															          <li><a href="https://www.healthcare.gov/">Healthcare.gov</a></li>
-															          <li><a href="https://www.hhs.gov/">HHS.gov</a></li>
-															        </ul>
-															      </div>
-						                <div class="col-md-3">
-															        <h6 class="h5">CMS &amp; HHS Websites</h6>
-															        <ul class="">
-															          <li><a href="https://www.cms.gov/">CMS.gov</a></li>
-															          <li><a href="https://www.medicare.gov/">Medicare.gov</a></li>
-															          <li><a href="https://www.mymedicare.gov/">MyMedicare.gov</a></li>
-															          <li><a href="https://www.medicaid.gov/">Medicaid.gov</a></li>
-															          <li><a href="https://www.healthcare.gov/">Healthcare.gov</a></li>
-															          <li><a href="https://www.hhs.gov/">HHS.gov</a></li>
-															        </ul>
-															      </div>
-						                <div class="col-md-3">
-															        <h6 class="h5">CMS &amp; HHS Websites</h6>
-															        <ul class="">
-															          <li><a href="https://www.cms.gov/">CMS.gov</a></li>
-															          <li><a href="https://www.medicare.gov/">Medicare.gov</a></li>
-															          <li><a href="https://www.mymedicare.gov/">MyMedicare.gov</a></li>
-															          <li><a href="https://www.medicaid.gov/">Medicaid.gov</a></li>
-															          <li><a href="https://www.healthcare.gov/">Healthcare.gov</a></li>
-															          <li><a href="https://www.hhs.gov/">HHS.gov</a></li>
-															        </ul>
-															      </div>
-						            </div>
-						            <div class="col-sm-4 col-md-3 col-lg-3 footer-logo-container">
-						                <div class="hhs-logo-container"><img alt="Department of Health &amp; Human Services USA" src="images/hhs-logo-white.svg"></div>
-						            </div>
-						        </div>
-						    </div>
+				    <div class="container">
+	            	<div class="col-sm-8 col-md-9 col-lg-9">
+		                
+		            </div>
+		        </div>
+			    </div>
 				</div>
-						</footer>
+			</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('body').scrollspy({ target: '.bs-docs-sidebar' });
+      
+      $(document).ready(function () {
+        $('.bs-docs-sidenav li a').click(function(e) {
+              $('.bs-docs-sidenav li.active').removeClass('active');
+
+              var $parent = $(this).parent();
+              $parent.addClass('active');
+              e.preventDefault();
+          });
+      });
+      $(document).ready(function () {
+        $('.back-to-top').click(function(e) {
+              $('.bs-docs-sidenav li.active').removeClass('active');
+          });
+
+
+      });
+
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $(".bs-docs-sidenav li a, .back-to-top").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 500, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+
+    </script>
+    
   </body>
 </html>
