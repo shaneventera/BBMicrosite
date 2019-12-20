@@ -152,15 +152,15 @@
             
 
 
-            <h3>Running the App</h3>
+            <!-- <h3>Running the App</h3>
             <p>Build and install the Libraries</p>
             <pre><code>./mvnw clean install
 ./mvnw spring-boot:run
             </code></pre>
             <p>Run in a docker container</p>
             <pre><code>docker build -t bluebutton-rest-client .
-docker run -p 8080:8080 bluebutton-rest-client</code></pre>
-            <h4>Using the App</h4>
+docker run -p 8080:8080 bluebutton-rest-client</code></pre> -->
+            <h3>Using the App</h3>
             <h5>Step 1</h5>
             <p>Once the application is started, we will need to ensure that we are authenticated with the server before we can complete anything. First we will run a test to see if the app is up and we get an unauthorized error.
             Run:</p>
@@ -180,17 +180,17 @@ docker run -p 8080:8080 bluebutton-rest-client</code></pre>
             Make sure to replace <code>{AUTHORIZATION_TOKEN}</code> with the copied value.</p>
             <pre><code>curl -H "Authorization: Bearer {AUTHORIZATION_TOKEN}" http://localhost:8080/resources/trusted_client</code></pre>
             <p>If it was successful you should see the response: <code>hello user authenticated by trusted client</code></p>
-            <h4>SwaggerUI</h4>
+            <h3>SwaggerUI</h3>
             <p>SwaggerUI should contain all of the list of API's and provide an interface
             to describe the inputs and possible outputs.
             If prompted by a username and password:
             username: user
             password: password
             <code>http://localhost:8080/swagger-ui.html</code></p>
-            <h4>Running Automated Tests</h4>
+            <h3>Running Automated Tests</h3>
             <p>Automated Tests can be run from this directory using:</p>
             <pre><code>./test.sh</code></pre>
-            <h4>Running the Query Script</h4>
+            <h3>Running the Query Script</h3>
             <p>The Query script can be run using the following format:</p>
             <pre><code>./query.sh NPI_VALUE</code></pre>
             <p>Where the <code>NPI_VALUE</code> is the npi you are searching for</p>
@@ -222,7 +222,6 @@ docker run -p 8080:8080 bluebutton-rest-client</code></pre>
               <li>line_prvdr_pmt_amt</li>
               <li>line_1st_expns_dt</li>
               <li>line_last_expns_dt</li>
-
             </ol>
           </div>
           <div class="doc-section">
@@ -495,7 +494,7 @@ docker run -p 8080:8080 bluebutton-rest-client</code></pre>
 }</code></pre>
           </div>
           <div class="doc-section">
-            <h2 id="js-example">Support</h2>
+            <h2 id="js-support">Support</h2>
             <p style="margin-bottom: 200px;"></p>
           </div>
 
